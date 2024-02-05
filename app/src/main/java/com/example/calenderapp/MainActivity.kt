@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity(), CalendarAdapter.OnItemListener {
     }
 
     override fun onItemClick(position: Int, dayText: String) {
-        if (dayText == "") {
+        if (dayText != "") {
             val message = "Selected Date $dayText ${monthYearFromDate(selectedDate)}"
             Toast.makeText(this, message, Toast.LENGTH_LONG).show()
         }
